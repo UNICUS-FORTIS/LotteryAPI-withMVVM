@@ -10,9 +10,13 @@
 		DEF361352AB23227008B7ED0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF361342AB23227008B7ED0 /* AppDelegate.swift */; };
 		DEF361372AB23227008B7ED0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF361362AB23227008B7ED0 /* SceneDelegate.swift */; };
 		DEF361392AB23227008B7ED0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF361382AB23227008B7ED0 /* ViewController.swift */; };
-		DEF3613C2AB23227008B7ED0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEF3613A2AB23227008B7ED0 /* Main.storyboard */; };
 		DEF3613E2AB23228008B7ED0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEF3613D2AB23228008B7ED0 /* Assets.xcassets */; };
 		DEF361412AB23228008B7ED0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEF3613F2AB23228008B7ED0 /* LaunchScreen.storyboard */; };
+		DEF3614E2AB23352008B7ED0 /* Lottery.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF3614D2AB23352008B7ED0 /* Lottery.swift */; };
+		DEF361512AB233A7008B7ED0 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF361502AB233A7008B7ED0 /* APIService.swift */; };
+		DEF361532AB23523008B7ED0 /* LotteryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF361522AB23523008B7ED0 /* LotteryViewModel.swift */; };
+		DEF361562AB23554008B7ED0 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF361552AB23554008B7ED0 /* Observable.swift */; };
+		DEF361592AB242F3008B7ED0 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DEF361582AB242F3008B7ED0 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +24,13 @@
 		DEF361342AB23227008B7ED0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEF361362AB23227008B7ED0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DEF361382AB23227008B7ED0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DEF3613B2AB23227008B7ED0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DEF3613D2AB23228008B7ED0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DEF361402AB23228008B7ED0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DEF361422AB23228008B7ED0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEF3614D2AB23352008B7ED0 /* Lottery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lottery.swift; sourceTree = "<group>"; };
+		DEF361502AB233A7008B7ED0 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		DEF361522AB23523008B7ED0 /* LotteryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryViewModel.swift; sourceTree = "<group>"; };
+		DEF361552AB23554008B7ED0 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEF361592AB242F3008B7ED0 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +64,66 @@
 		DEF361332AB23227008B7ED0 /* LotteryAPIwithMVVM */ = {
 			isa = PBXGroup;
 			children = (
-				DEF361342AB23227008B7ED0 /* AppDelegate.swift */,
-				DEF361362AB23227008B7ED0 /* SceneDelegate.swift */,
-				DEF361382AB23227008B7ED0 /* ViewController.swift */,
-				DEF3613A2AB23227008B7ED0 /* Main.storyboard */,
+				DEF361482AB23232008B7ED0 /* App */,
+				DEF3614F2AB23364008B7ED0 /* APIService */,
+				DEF361542AB2353A008B7ED0 /* Helper */,
+				DEF3614C2AB2325A008B7ED0 /* Models */,
+				DEF3614A2AB23248008B7ED0 /* ViewModel */,
+				DEF3614B2AB23250008B7ED0 /* View */,
 				DEF3613D2AB23228008B7ED0 /* Assets.xcassets */,
 				DEF3613F2AB23228008B7ED0 /* LaunchScreen.storyboard */,
 				DEF361422AB23228008B7ED0 /* Info.plist */,
 			);
 			path = LotteryAPIwithMVVM;
+			sourceTree = "<group>";
+		};
+		DEF361482AB23232008B7ED0 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DEF361342AB23227008B7ED0 /* AppDelegate.swift */,
+				DEF361362AB23227008B7ED0 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		DEF3614A2AB23248008B7ED0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DEF361522AB23523008B7ED0 /* LotteryViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DEF3614B2AB23250008B7ED0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DEF361382AB23227008B7ED0 /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DEF3614C2AB2325A008B7ED0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DEF3614D2AB23352008B7ED0 /* Lottery.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DEF3614F2AB23364008B7ED0 /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+				DEF361502AB233A7008B7ED0 /* APIService.swift */,
+			);
+			path = APIService;
+			sourceTree = "<group>";
+		};
+		DEF361542AB2353A008B7ED0 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				DEF361552AB23554008B7ED0 /* Observable.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +142,9 @@
 			dependencies = (
 			);
 			name = LotteryAPIwithMVVM;
+			packageProductDependencies = (
+				DEF361582AB242F3008B7ED0 /* SnapKit */,
+			);
 			productName = LotteryAPIwithMVVM;
 			productReference = DEF361312AB23227008B7ED0 /* LotteryAPIwithMVVM.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +173,9 @@
 				Base,
 			);
 			mainGroup = DEF361282AB23227008B7ED0;
+			packageReferences = (
+				DEF361572AB242F3008B7ED0 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = DEF361322AB23227008B7ED0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +192,6 @@
 			files = (
 				DEF361412AB23228008B7ED0 /* LaunchScreen.storyboard in Resources */,
 				DEF3613E2AB23228008B7ED0 /* Assets.xcassets in Resources */,
-				DEF3613C2AB23227008B7ED0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,22 +203,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEF361392AB23227008B7ED0 /* ViewController.swift in Sources */,
+				DEF361512AB233A7008B7ED0 /* APIService.swift in Sources */,
 				DEF361352AB23227008B7ED0 /* AppDelegate.swift in Sources */,
+				DEF361562AB23554008B7ED0 /* Observable.swift in Sources */,
 				DEF361372AB23227008B7ED0 /* SceneDelegate.swift in Sources */,
+				DEF361532AB23523008B7ED0 /* LotteryViewModel.swift in Sources */,
+				DEF3614E2AB23352008B7ED0 /* Lottery.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DEF3613A2AB23227008B7ED0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DEF3613B2AB23227008B7ED0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DEF3613F2AB23228008B7ED0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,9 +352,9 @@
 				INFOPLIST_FILE = LotteryAPIwithMVVM/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -320,9 +380,9 @@
 				INFOPLIST_FILE = LotteryAPIwithMVVM/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -358,6 +418,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DEF361572AB242F3008B7ED0 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DEF361582AB242F3008B7ED0 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DEF361572AB242F3008B7ED0 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DEF361292AB23227008B7ED0 /* Project object */;
 }
