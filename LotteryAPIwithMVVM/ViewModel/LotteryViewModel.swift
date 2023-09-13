@@ -70,4 +70,13 @@ class LotteryViewModel {
     func numberOfInComponent() -> Int {
         return dateArray.count
     }
+    
+    func didSelectRow(row: Int) -> Int {
+        return dateArray[row]
+    }
+    
+    func titleForRow(row: Int) -> String {
+        let row = "\(dateArray[row])"
+        return row
+    }
 }

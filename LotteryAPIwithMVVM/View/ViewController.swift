@@ -125,13 +125,13 @@ extension ViewController: UIPickerViewDelegate {
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
       
-        let row = viewModel.dateArray[row]
+        let rowFromRow = viewModel.didSelectRow(row: row)
         
-        viewModel.fetchLottoAPI(round: row)
+        viewModel.fetchLottoAPI(round: rowFromRow)
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return "\(viewModel.dateArray[row])"
+        return viewModel.titleForRow(row: row)
     }
 }
 
